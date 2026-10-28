@@ -1,0 +1,70 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Monospace;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(45deg, #5558DA, #5FD1F9);
+  background-size: 300% 300%;
+  animation: animate 4s ease-in-out infinite;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+}
+.section .time {
+  background: rgba(255, 255, 255, 0.1);
+  height: 150px;
+  width: 150px;
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section .title {
+  background: rgba(0, 0, 0, 0.2);
+  width: 150px;
+  height: 60px;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.colon {
+  font-size: 90px;
+  color: white;
+  font-weight: 800;
+}
+
+/* Animations */
+@keyframes animate {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
