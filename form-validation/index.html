@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Form Validation</title>
+</head>
+<body>
+  <div class="container">
+    <form action="/" id="form">
+      <h1>Registration</h1>
+      <!-- Input Box 1 -->
+      <div class="input-box">
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter username" name="username" id="username">
+        <div class="error"></div>
+      </div>
+      <!-- Input Box 2 -->
+      <div class="input-box">
+        <label for="email">Email Address</label>
+        <input type="email" placeholder="Enter email address" name="email" id="email">
+        <div class="error"></div>
+      </div>
+      <!-- Input Box 3 -->
+      <div class="input-box">
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter password" name="password" id="password">
+        <div class="error"></div>
+      </div>
+      <!-- Input Box 4 -->
+      <div class="input-box">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" placeholder="Enter confirm password" name="confirm-password" id="confirm-password">
+        <div class="error"></div>
+      </div>
+
+      <button>Sign Up</button>
+    </form>
+  </div>
+
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
