@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #0f172a;
+  --bg-primary-light: #1e293b;
+  --bg-secondary: #334155;
+  
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3be;
+  --text-dark: #64748b;
+
+  --warning-color: #fbb214;
+  --warning-color-light: #fcd34d;
+  
+  --danger-color: #ef4444;
+  --danger-color-light: #f87171;
+  
+  --default-blue: #3b82f6;
+  --default-blue-light: #60a5fa;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: var(--bg-primary);
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Card */
+
+.card {
+  background-color: var(--bg-primary-light);
+  padding: 32px;
+  border: 1px solid var(--bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  margin-bottom: 24px;
+}
+
+.card-header h1 {
+  color: var(--text-primary);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+
+/* Textarea */
+
+.text-input {
+  width: 100%;
+  min-height: 200px;
+  padding: 16px;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--bg-secondary);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 1.6;
+  resize: vertical;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: var(--default-blue);
+  background-color: var(--bg-primary-light);
+}
+
+.text-input::placeholder {
+  color: var(--text-dark);
+}
+
+
+/* Counter Information */
+
+.counter-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.counter-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  font-size: 16px;
+}
+
+.current-count {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.current-count.warning {
+  color: var(--warning-color);
+}
+
+.current-count.danger {
+  color: var(--danger-color);
+}
+
+.separator {
+  color: var(--text-dark);
+}
+
+.max-count {
+  color: var(--text-secondary);
+}
+
+
+/* Progress Bar */
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+                              var(--default-blue) 0%, 
+                              var(--default-blue-light) 100%
+                             );
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+
+.progress-fill.warning {
+  background: linear-gradient(90deg, 
+                              var(--warning-color) 0%, 
+                              var(--warning-color-light) 100%
+                             );
+}
+
+
+.progress-fill.danger {
+  background: linear-gradient(90deg, 
+                              var(--danger-color) 0%, 
+                              var(--danger-color-light) 100%
+                             );
+}
